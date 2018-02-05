@@ -1,8 +1,12 @@
 clear clc;
 
-c = [-1; -2; 0; 0; 0];
-A = [-2 1 1 0 0; -1 1 0 1 0; 1 0 0 0 1];
-b = [2; 3; 2];
+% c = [-1; -2; 0; 0; 0];
+% A = [-2 1 1 0 0; -1 1 0 1 0; 1 0 0 0 1];
+% b = [2; 3; 2];
+
+c = [-1; -2; 0; 0];
+A = [1 1 1 0; 2 1 0 1];
+b = [20; 30];
 
 optimal = solve_lp(c,A,b);
 
@@ -71,7 +75,7 @@ function g = combinatoric(A,x,n,initial)
         else
             for i=1:size(A,2)
                 for j=i:size(A,2)
-                    if initial == 1 & i~=j
+                    if initial == 1 && i~=j
                         x = cat(2, x, [i;j]);
                     end
                 end
