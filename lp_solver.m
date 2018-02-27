@@ -1,7 +1,5 @@
-%% mie376 homework 2
-% matthew reiter (1002246722)
+% matthew reiter
 
-%% questions 9 and 15
 clear clc;
 
 c = [-1; -2; 0; 0];
